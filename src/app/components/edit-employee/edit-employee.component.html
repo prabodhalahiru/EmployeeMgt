@@ -1,0 +1,24 @@
+<div *ngIf="employee">
+
+    <h2 style="color: blue; border: 24; background-color: rgb(180, 213, 243);" >{{ employee.position }}</h2>
+    <div style="color: blue; border: 24; background-color: rgb(180, 213, 243);" >
+        Position:
+        <input [(ngModel)]="employee.position" placeholder="Position"/>
+    </div>
+    <div style="color: blue; border: 24; background-color: rgb(180, 213, 243);" >
+        First Name:
+        <input [(ngModel)]="employee.firstName" placeholder="First Name"/>
+    </div>
+    <div style="color: blue; border: 24; background-color: rgb(180, 213, 243);" >
+        Last Name:
+        <input [(ngModel)]="employee.lastName" placeholder="Last Name"/>
+    </div>
+    <div style="color: blue; border: 24; background-color: rgb(180, 213, 243);" >
+        Country:
+        <input [(ngModel)]="employee.country" placeholder="Country"/>
+    </div>
+    <button (click)="updateEmployee(employee)" *ngIf="employee.id">Save</button>
+    <button (click)="deleteEmployee(employee)" *ngIf="employee.id">Delete</button>
+    <button (click)="createEmployee(employee)" *ngIf="!employee.id">Add</button>
+
+</div>
